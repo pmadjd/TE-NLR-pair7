@@ -3,23 +3,14 @@ body {
     background-color: #87CEEB;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
+    grid-template-rows: 100px 2fr 1fr 100px;
+    row-gap: 10px;
+    column-gap: 10px;
     grid-template-areas:
     "header nav"
-    "main main";
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
-    grid-template-areas:
     "information information"
     "race store"
     "footer footer";
-    grid-area: main;
 }
 
 
@@ -35,16 +26,35 @@ nav {
 #information {
     grid-area: information;
     display: flex;
-    margin: 0;
-    align-items: center;
 }
 
 #race {
     grid-area: race;
+    display: flex;
+}
+
+#info-div {
+    display: flex;
+    grid-area: info-div;
+    flex-direction: column;
+}
+
+#race-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 #store {
     grid-area: store;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+   
 }
 
 footer {
@@ -61,11 +71,6 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    /*width: 30%;
-    background-color: #00afef;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 50px;*/
 }
 
 header img {
@@ -77,24 +82,24 @@ header h1 {
     padding-top: 10px;
 }
 
-main img {
+#information img {
     object-fit: cover;
     margin-right: 20px;
     height: 350px;
     width: 35%;
 }
 
-main li:before {
+#information li:before {
     content: '🍡';
     margin-left: -31px;
     padding-right: 8px;
 }
 
-main li {
+#information li {
     list-style: none;
 }
 
-main, section, footer {
+#information, section, footer {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;
@@ -104,6 +109,7 @@ main, section, footer {
     width: 25%;
     padding: 10px;
     border-radius: 5px;
+    border: none;
     color: #000000;
     background-color: #00afef;
     font-weight: bold;
@@ -115,9 +121,15 @@ main, section, footer {
     width: 25%;
     padding: 10px;
     border-radius: 5px;
+    border: none;
     color: #000000;
     background-color: #00afef;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+}
+
+a:hover, a:active, a:visited, a:link {
+    color: #000000;
+    text-decoration: none;
 }
