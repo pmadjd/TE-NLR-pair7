@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel = "stylesheet" href = "contact-styles.css"/>
+</head>
+<body>
+    <header>
+        <img src="images/te-pops.png" alt="TE Popsicle" />
+        <h1>Tech Elevator Popsicles</h1>
+    </header>
+    <nav>
+        <ul>
+            <button class="nav-button"><li><a href="index.html">Home</a></li></button>
+            <button class="nav-button"><li><a href="#">Store</a></button></li></button>
+            <button class="nav-button"><li><a href="contact-us.html">Contact Us</a></li></button>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Contact Us</h1>
+        <form action="/api/contact" method="POST">
+            <div>
+                <label for="fullName">Name:</label>
+                <input id="fullName" name="fullName" type="text" />
+            </div>
+            <div>
+                <label for="reference">How did you hear of us?</label>
+                <select name="reference" id="reference">
+                    <option value="popsicleMonthly">Popsicle Monthly</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="other">Other</option>
+                  </select>
+            </div>
+            <div>
+                <label for="favColor">What color is your favorite popsicle?</label>
+                <input id="favColor" name="favColor" type="color" value="#00afef" />
+            </div>
+            <div>
+                <label for="comments">Please let us know any comments you have:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <input type="submit" />
+            </div>
+
+        </form>
+    </main>
+
+    <div id="whitespace"></div>
+
+    <footer>
+        <p>
+            &#169 Tech Elevator 2021
+        </p>
+    </footer>
+    
+</body>
+</html>
