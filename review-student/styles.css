@@ -10,7 +10,7 @@ body {
     "main main";
 }
 
-main{
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
@@ -22,31 +22,32 @@ main{
     grid-area: main;
 }
 
-.nav{
+
+header {
+    grid-area: header;
+    display: flex;
+}
+
+nav {
     grid-area: nav;
 }
 
-#information{
+#information {
     grid-area: information;
     display: flex;
     margin: 0;
+    align-items: center;
 }
 
-#race{
+#race {
     grid-area: race;
 }
 
-#store{
+#store {
     grid-area: store;
 }
 
-.header{
-    grid-area: header;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer{
+footer {
     grid-area: footer;
 }
 
@@ -54,15 +55,17 @@ nav ul {
     margin: 0;
     padding: 20px 0 0 0;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 nav ul li {
     list-style: none;
-    width: 30%;
+    /*width: 30%;
     background-color: #00afef;
     border-radius: 5px;
     text-align: center;
-    line-height: 50px;
+    line-height: 50px;*/
 }
 
 header img {
@@ -108,4 +111,13 @@ main, section, footer {
     text-transform: uppercase;
 }
 
-
+.nav-button {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
