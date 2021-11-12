@@ -133,3 +133,28 @@ a:hover, a:active, a:visited, a:link {
     color: #000000;
     text-decoration: none;
 }
+
+@media screen and (max-width: 800px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 0.5fr 3fr 1.5fr 1.5fr .5fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "information"
+        "race"
+        "store"
+        "footer";
+    }
+
+    #information{
+        flex-direction: column;
+    }
+
+    #information img{
+        object-fit: cover;
+        margin-right: 20px;
+        height: auto;
+        width: 100%;
+    }
+}
