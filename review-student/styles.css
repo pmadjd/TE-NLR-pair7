@@ -3,7 +3,7 @@ body {
     background-color: #87CEEB;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 2fr 1fr 80px;
+    grid-template-rows: 100px 1fr .5fr 80px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
@@ -54,7 +54,6 @@ nav {
     align-items: center;
     justify-content: center;
     justify-items: center;
-   
 }
 
 footer {
@@ -77,6 +76,7 @@ header img {
     height: 100px;
     width: auto;
 }
+
 header h1 {
     padding-left: 20px;
     padding-top: 10px;
@@ -136,22 +136,16 @@ a:hover, a:active, a:visited, a:link {
 
 @media screen and (max-width: 800px){
     body{
-        grid-template-columns: 1fr;
-        grid-template-rows: .5fr 0.5fr 3fr 1.5fr 1.5fr .5fr;
-        grid-template-areas:
-        "header"
-        "nav"
-        "information"
-        "race"
-        "store"
-        "footer";
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    #information{
+    #information {
         flex-direction: column;
     }
 
-    #information img{
+    #information img {
         object-fit: cover;
         margin-right: 20px;
         height: auto;
